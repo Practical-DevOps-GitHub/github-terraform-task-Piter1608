@@ -36,3 +36,4 @@ resource "github_actions_secret" "pat_secret" {
   secret_name = "PAT"
   plaintext_value = "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" 
 }
+
