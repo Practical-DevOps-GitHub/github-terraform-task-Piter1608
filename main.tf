@@ -13,7 +13,7 @@ provider "github" {
 }
 resource "github_branch_protection" "main" {
   repository_id = "github-terraform-task-Piter1608"
-  pattern     = "develop"
+  pattern     = "main"
 
   required_pull_request_reviews {
     dismiss_stale_reviews = false
