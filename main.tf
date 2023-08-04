@@ -33,8 +33,9 @@ resource "github_repository_deploy_key" "deploy_key" {
 }
 resource "github_actions_environment_secret" "pat_secret" {
   repository = "github-terraform-task-Piter1608"
+  environment      = "example_environment"
   secret_name       = "PAT"
-  plaintext_value   = "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"
+  plaintext_value   = "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"
 }
 
 
