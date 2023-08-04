@@ -11,7 +11,17 @@ provider "github" {
   token = "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"
   owner = "Practical-DevOps-GitHub"
 }
+resource "github_branch_protection" "main" {
+  repository_id = "github-terraform-task-Piter1608"
+  pattern     = "develop"
 
+  required_pull_request_reviews {
+    dismiss_stale_reviews = false
+    required_approving_review_count = 2
+  }
+
+  enforce_admins = true
+}
 resource "github_branch" "develop" {
   repository = "github-terraform-task-Piter1608"
   branch     = "develop"
