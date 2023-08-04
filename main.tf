@@ -16,6 +16,12 @@ resource "github_branch_protection" "main" {
   pattern     = "main"
 
   enforce_admins = true
+  required_pull_request_reviews {
+    dismissal_restrictions = []
+    dismiss_stale_reviews   = false
+    require_code_owner_reviews = true
+    required_approving_review_count = 1
+  }
 }
 resource "github_branch" "develop" {
   repository = "github-terraform-task-Piter1608"
